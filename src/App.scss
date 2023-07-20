@@ -1,0 +1,17 @@
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1160px;
+  overflow: hidden;
+}
+html,
+body {
+  height: 100%;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
