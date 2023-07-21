@@ -22,12 +22,15 @@
       background-color: $accent-color;
       font-family: $sec-font;
       padding: 0 20px;
-      font-size: 18px;
+      max-width: 150px;
+      width: 100%;
+      font-size: 16px;
       line-height: 50px;
       font-weight: 700;
       color: $base-color;
       border-radius: 25px;
       border: none;
+      text-align: center;
       outline: none;
       overflow: hidden;
       cursor: pointer;
