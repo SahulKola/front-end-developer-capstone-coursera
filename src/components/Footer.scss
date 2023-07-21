@@ -31,12 +31,18 @@ footer {
       }
       ul {
         li {
+          a {
+            text-decoration: none;
+            color: $white;
+          }
           margin-top: 12px;
           cursor: pointer;
           transition: transform 0.2s ease;
           &:hover {
             transform: translateX(5px);
-            color: $accent-color;
+            a {
+              color: $accent-color;
+            }
             transition: transform 0.2s ease;
           }
           &:first-of-type {
@@ -46,7 +52,7 @@ footer {
       }
       p {
         display: flex;
-        align-items: center;
+        align-items: baseline;
         justify-content: flex-start;
         margin: 0 0 12px 0;
         line-height: 22px;
@@ -90,6 +96,13 @@ footer {
       word-break: break-word;
       overflow: hidden;
       width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 599px) {
+  footer {
+    .footer-wrap {
+      grid-template-columns: 1fr;
     }
   }
 }

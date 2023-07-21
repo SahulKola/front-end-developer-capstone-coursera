@@ -1,0 +1,67 @@
+@use "../scss/index" as *;
+
+.about {
+  margin: 60px 0;
+  .about-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    .text-content {
+      flex: 1 1 50%;
+      font-family: $primary-font;
+      line-height: 1.2;
+      font-weight: 700;
+      .heading {
+        font-size: 64px;
+        color: $accent-color;
+      }
+      .location {
+        font-size: 48px;
+        color: $base-color;
+      }
+      .desc {
+        margin: 20px 0 0;
+        font-family: $sec-font;
+        font-weight: 400;
+        line-height: 1.3;
+        color: $base-color;
+      }
+    }
+    .img-wrap {
+      flex: 1 1 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      img {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        z-index: 1;
+        box-shadow: 10px 5px 20px rgba(#000, 0.4);
+        &:last-child {
+          z-index: 0;
+          margin: -10% 0 0 -10%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .about {
+    .about-wrap {
+      flex-direction: column;
+      .img-wrap {
+        img {
+          box-shadow: 4px 4px 5px rgba(#000, 0.3);
+
+          &:last-child {
+            margin: -10% 0 0 -5%;
+          }
+        }
+      }
+    }
+  }
+}

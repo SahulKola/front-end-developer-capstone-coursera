@@ -1,6 +1,7 @@
 import "./Footer.scss";
 import footerLogo from "../assets/footer-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import {
   faEnvelope,
   faLocationDot,
@@ -13,6 +14,12 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
+  const handleScroll = () => {
+    const ele = document.querySelector("#about");
+    if (ele) {
+      ele.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <footer>
       <div className="container">
@@ -23,12 +30,23 @@ const Footer = () => {
           <div className="footer-items">
             <h3>Quick Links</h3>
             <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Menu</li>
-              <li>Reservations</li>
-              <li>Order Online</li>
-              <li>Login</li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/" onClick={handleScroll}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/404">Menu</Link>
+              </li>
+              <li>
+                <Link to="/reservation">Reservation</Link>
+              </li>
+              <li>
+                <Link to="/404">Login</Link>
+              </li>
             </ul>
           </div>
           <div className="footer-items">
@@ -37,13 +55,13 @@ const Footer = () => {
               <i>
                 <FontAwesomeIcon icon={faLocationDot} />
               </i>
-              676 Lincoln Drive, East Petersburg, Pennsylvania.
+              Jublee Hills, Hyderabad.
             </p>
             <p>
               <i>
                 <FontAwesomeIcon icon={faPhone} />
               </i>
-              717-581-9777
+              (+91) XXXXX84223
             </p>
             <p>
               <i>
@@ -56,16 +74,32 @@ const Footer = () => {
           <div className="footer-items">
             <h3>Connect with us</h3>
             <div className="socials">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faYoutube} />
               </a>
             </div>
